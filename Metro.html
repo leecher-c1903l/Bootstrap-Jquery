@@ -10,9 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        * {
+        /* * {
             outline: 1px solid red;
-        }
+        } */
         .container {
             margin: 0 auto;
         }
@@ -42,7 +42,94 @@
             right: 3vw;
             bottom: 10vh;
         }
+        
+        h5{
+            font: bold 12px/18px Open Sans;
+            text-rendering: optimizeLegibility;
+        }
+        .flip-card-front h5{
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            background-color: #ff9f00;
+            margin: 0;
+            padding: 5px 10px 7px;
+        }
+        
+        .flip-card {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transition: .3s;
+            width: 264px;
+            height: 248px;
+            perspective: 1000px;
+            overflow: hidden;
+        }
 
+        .flip-card-inner {
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;      
+            transition: transform 0.6s;
+            transform-style: preserve-3d; 
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            backface-visibility: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card-front {
+            background-color: #ff9f00;
+            color: #ffedda;
+        }
+
+        .flip-card-front img{
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            margin-bottom: 0 0 100px;
+        }
+        .flip-card-back {
+            background-color: #ff9f00;
+            color: #ffedda;
+            transform: rotateY(180deg);
+            font-size: 12px;
+            text-align: left;
+            padding: 15px;
+        }
+        .flip-card-back .btn{
+            background-color: #b06d00 !important;
+            border: none;
+            font-size: 12px;
+            padding: 5px 15px;
+        }
+        .excerpt{
+            line-height: 18px;
+            height: 145px;
+            overflow: hidden;
+        }
+        .btn{
+            text-shadow: none;
+            box-shadow: none;
+            text-transform: capitalize;
+            color: #fff !important;
+            border-radius: 0;
+            transition: .3s;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +142,40 @@
             <div class="container main-container">Inside Container
                 <div class="row">Row 1</div>
                 <div class="row">Row 2</div>
-                <div class="row">Row 3</div>
+                <h3>Lates Projects</h3>
+                <div class="row">   
+                    <div class="col-sm-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- start front card -->
+                                <div class="flip-card-front"> 
+                                    <img src="./img-card/project-1-264x248.jpg" alt="img" class="img-card">
+                                    <div class="content">
+                                        <h5>Image Format</h5>
+                                    </div>
+                                </div>
+                                <!-- end front card -->
+                                <!-- start back card -->
+                                <div class="flip-card-back">
+                                    <div class="inner">     
+                                        <h5>Image Format</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit,
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                        </p>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn btn-primary" title="Image Format"> Read More</a>
+                                    </div>       
+                                </div>
+                                <!-- end back card -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"></div>
+                </div>
                 <div class="row">Row 4</div>
                 <div class="row">Row 5</div>
             </div>
