@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Metro | Increasing your profits</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -42,7 +43,14 @@
             right: 3vw;
             bottom: 10vh;
         }
-
+        .row5left {
+            background-image: url("/img.jpg");
+            background-repeat: no-repeat;
+            margin-top: 3em;
+        }
+        .row5right {
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -52,14 +60,42 @@
             Header
         </header>
         <main>Main content
-            <div class="container main-container">Inside Container
+            <div class="container main-container">
                 <div class="row">
                     <div class="col-sm-8 slide-holder"></div>
                     <div class="col-sm-4 side-note"></div>
                 </div>
                 <div class="row">Row 2</div>
                 <div class="row">Row 3</div>
-                <div class="row">Row 4</div>
+                <div class="row">
+                    <div class="col-sm-4 row5left"></div>
+                    <div class="col-sm-8 container row5right">   
+                        <div style="margin-top: 3em;">
+                            <h2>Professional Management Skills</h2>
+                        </div>
+                        <div class="container">
+                            <div class="row" style="margin-top: 3em;">
+                                <div class="col skill1">
+                                    <h5><a href="#">Lorem ipsum dolor sit</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae duiligula.</p>
+                                </div>
+                                <div class="col skill2">
+                                    <h5><a href="#">Etiam eget porttitor enim</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae duiligula.</p>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col skill3">
+                                    <h5><a href="#">Fusce egestas ultricies</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae duiligula.</p>
+                                </div>
+                                <div class="col skill4">
+                                    <h5><a href="">Donec convallis arcu id lectus</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae duiligula.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">Row 5</div>
             </div>
         </main>
