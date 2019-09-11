@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Metro | Increasing your profits</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67aa126bbd.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -41,10 +41,18 @@
         .bottom-container {
             height: 45vh;
         }
-        button {
+
+        #back-to-top {
             position: fixed;
             right: 3vw;
             bottom: 10vh;
+            transform: scale(3);
+        }
+        .fa-arrow-circle-up {
+            color: #f86924;
+        }
+        .fa-arrow-circle-up:hover {
+            opacity: 0.8;
         }
         .row5left {
             background-image: url("/img.jpg");
@@ -153,7 +161,7 @@
             <div class="container bottom-container">Bottom Container</div>
         </footer>
     </div>
-    <button id="back-to-top"><a href="#top">Back to Top</a></button>
+    <div id="back-to-top"><a href="#top"><i class="fas fa-arrow-circle-up"></i></a></div>
 </body>
     <script type="text/javascript">
         $(window).scroll(function(){
