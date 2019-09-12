@@ -110,6 +110,10 @@
         p{
             margin-bottom: 0 0 100px;
         }
+        a{
+            outline: none;
+            text-decoration: none;
+        }
         .flip-card-back {
             background-color: #ff9f00;
             color: #ffedda;
@@ -118,7 +122,7 @@
             text-align: left;
             padding: 15px;
         }
-        .flip-card-back .btn{
+        .flip-card-back .btn-primary{
             background-color: #b06d00 !important;
             border: none;
             font-size: 12px;
@@ -129,7 +133,7 @@
             height: 145px;
             overflow: hidden;
         }
-        .btn{
+        .btn-primary{
             text-shadow: none;
             box-shadow: none;
             text-transform: capitalize;
@@ -172,6 +176,12 @@
         .service-box.color-1{
             background-color: #35bc7a;
         }
+        .service-box.color-2{
+            background-color: #f86924;
+        }
+        .service-box.color-3{
+            background-color: #ff9f00;
+        }
         .service-box .icon{
             float:none;
             margin: 0;
@@ -181,12 +191,26 @@
             font-size: 72px;
             color: #fff;
         }
+        [class^=icon-]:before, 
+        [class*=" icon-"]:before {
+            text-decoration: inherit;
+            display: inline-block;
+        }
+        [class^=icon-], 
+        [class*=" icon-"] {       
+            font-style: normal;
+            line-height: normal;   
+        }
         .icon-leaf:before{
             content: "\f06c";
-        } 
-        figure{
-            display: block;
         }
+        .icon-cogs:before{
+            content: "\f085";
+        }
+        .icon-comments-alt:before{
+            content: "\f0e6";
+        }
+        
         .service-box_text{
             line-height: 20px;
             margin-bottom: 20px;
@@ -241,12 +265,20 @@
             font-size: 24px;
             font-family: FontAwesome;
             line-height: 41px;
-            color: #35bc7a;
             text-align: center;
             position: absolute;
             top: 0;
             left: 0;
             transition: 0.3s;
+        }
+        .service-box.color-2.extra-btn .btn:hover:before {
+            color: #f86924;
+        }
+        .service-box.color-1.extra-btn .btn:hover:before {
+            color: #35bc7a;
+        }
+        .service-box.color-3.extra-btn .btn:hover:before {
+            color: #ff9f00;
         }
         .btn:hover:after{
             left: 50px;
@@ -274,14 +306,40 @@
                                 <h2 class="title">Creative Solutions</h2>
                                 <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
                                 <div class="btn-align">
-                                    <a href="#" title="Read More" class="btn" target="_self">"Read More"</a>
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
                                 </div>
                             </div>
                         </div>
                         <!-- end service box -->
                     </div>
-                    <div class="col-sm-4">fa-battery-2</div>
-                    <div class="col-sm-4">fa-thermometer-2</div>
+                    <div class="col-sm-4">
+                        <div class="service-box color-2 extra-btn">
+                            <figure class="icon">
+                                <i class="icon-cogs"></i>
+                            </figure>
+                            <div class="service-box_body">
+                                <h2 class="title">Featured Service</h2>
+                                <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
+                                <div class="btn-align">
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="service-box color-3 extra-btn">
+                            <figure class="icon">
+                                <i class="icon-comments-alt"></i>
+                            </figure>
+                            <div class="service-box_body">
+                                <h2 class="title">Technical Support</h2>
+                                <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
+                                <div class="btn-align">
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="space"></div>
                 <h3>Lates Projects</h3>
@@ -307,7 +365,7 @@
                                             amet consectetur adipisicing elit. 
                                             Expedita non dolorum aspernatur voluptas aliquam. 
                                         </p>
-                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn btn-primary" title="Image Format"> Read More</a>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Image Format"> Read More</a>
                                     </div>       
                                 </div>
                                 <!-- end back card -->
@@ -335,7 +393,7 @@
                                             amet consectetur adipisicing elit. 
                                             Expedita non dolorum aspernatur voluptas aliquam. 
                                         </p>
-                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn btn-primary" title="Image Format"> Read More</a>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Slideshow Format"> Read More</a>
                                     </div>       
                                 </div>
                                 <!-- end back card -->
@@ -363,7 +421,7 @@
                                             amet consectetur adipisicing elit. 
                                             Expedita non dolorum aspernatur voluptas aliquam. 
                                         </p>
-                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn btn-primary" title="Image Format"> Read More</a>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Gallery Format"> Read More</a>
                                     </div>       
                                 </div>
                                 <!-- end back card -->
@@ -391,7 +449,7 @@
                                             amet consectetur adipisicing elit. 
                                             Expedita non dolorum aspernatur voluptas aliquam. 
                                         </p>
-                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn btn-primary" title="Image Format"> Read More</a>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Video Format"> Read More</a>
                                     </div>       
                                 </div>
                                 <!-- end back card -->
