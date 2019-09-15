@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Metro | Increasing your profits</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        * {
+        /* * {
             outline: 1px solid red;
-        }
+        } */
         .container {
             margin: 0 auto;
         }
@@ -25,11 +26,18 @@
         main {
             height: 220vh;
         }
+        .main-holder{
+            font: normal 14px/20px Open Sans;
+            color: #8d949a;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
         .main-container {
             height: 210vh;
         }
         .row {
-            height: 20%;
+            height: auto;
         }
         footer {
             height: 50vh;
@@ -42,7 +50,240 @@
             right: 3vw;
             bottom: 10vh;
         }
+        /* start flip card */
+        h5{
+            font: bold 12px/18px Open Sans;
+            text-rendering: optimizeLegibility;
+        }
+        .flip-card-front h5{
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            background-color: #ff9f00;
+            margin: 0;
+            padding: 5px 10px 7px;
+        }
+        
+        .flip-card {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transition: .3s;
+            width: 264px;
+            height: 248px;
+            perspective: 1000px;
+            overflow: hidden;
+        }
 
+        .flip-card-inner {
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;      
+            transition: transform 0.6s;
+            transform-style: preserve-3d; 
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            backface-visibility: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card-front {
+            background-color: #ff9f00;
+            color: #ffedda;
+        }
+
+        .flip-card-front img{
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            margin-bottom: 0 0 100px;
+        }
+        a{
+            outline: none;
+            text-decoration: none;
+        }
+        .flip-card-back {
+            background-color: #ff9f00;
+            color: #ffedda;
+            transform: rotateY(180deg);
+            font-size: 12px;
+            text-align: left;
+            padding: 15px;
+        }
+        .flip-card-back .btn-primary{
+            background-color: #b06d00 !important;
+            border: none;
+            font-size: 12px;
+            padding: 5px 15px;
+        }
+        .excerpt{
+            line-height: 18px;
+            height: 145px;
+            overflow: hidden;
+        }
+        .btn-primary{
+            text-shadow: none;
+            box-shadow: none;
+            text-transform: capitalize;
+            color: #fff !important;
+            border-radius: 0;
+            transition: .3s;
+            cursor: pointer;
+        }
+        /* end flip card */
+        
+        /* start static card */
+        
+        .col-sm-4{
+            position: relative;
+        }
+        .service-box{
+            padding: 27px 30px 30px 32px;
+            border: none;
+            font-family: open sans,sans-serif;
+            display: block;
+            color: #fff;
+            border-radius: 0; 
+            box-shadow: none;
+            overflow: hidden;
+            min-height: 20px;
+            margin-bottom: 0;
+        }
+        .service-box h2{
+            font-size: 32px;
+            line-height: 1.2em;
+            color: #fff;
+            margin: 17px 0 24px;
+            overflow: hidden;
+        }
+        h2{
+            font: normal 24px/29px Open Sans;
+            font-weight: 500 !important;
+            text-rendering: optimizeLegibility;
+        }
+        .service-box.color-1{
+            background-color: #35bc7a;
+        }
+        .service-box.color-2{
+            background-color: #f86924;
+        }
+        .service-box.color-3{
+            background-color: #ff9f00;
+        }
+        .service-box .icon{
+            float:none;
+            margin: 0;
+        }
+        .service-box .icon i{
+            font-family: FontAwesome;
+            font-size: 72px;
+            color: #fff;
+        }
+        [class^=icon-]:before, 
+        [class*=" icon-"]:before {
+            text-decoration: inherit;
+            display: inline-block;
+        }
+        [class^=icon-], 
+        [class*=" icon-"] {       
+            font-style: normal;
+            line-height: normal;   
+        }
+        .icon-leaf:before{
+            content: "\f06c";
+        }
+        .icon-cogs:before{
+            content: "\f085";
+        }
+        .icon-comments-alt:before{
+            content: "\f0e6";
+        }
+        
+        .service-box_text{
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        .service-box .btn-align{
+            text-align: right;
+        }
+        .btn {
+            width: 44px;
+            padding: 41px 0 0;
+            height: 0;
+            overflow: hidden;
+            border: 2px solid #fff !important;
+            background: 0 0;
+            position: relative;
+            border-radius: 44px;
+            transition: .3s;
+        }
+        .btn:hover{
+            background-color: #fff;
+        }
+        .btn:after{
+            left: 0;
+            color: #fff;
+            content: '\f061';
+            width: 42px;
+            font-size: 24px;
+            font-family: FontAwesome;
+            line-height: 41px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            transition: 0.3s;
+        }        
+       
+        .btn:before {
+            content: '\f061';
+            width: 44px;
+            font-size: 24px;
+            font-family: FontAwesome;
+            line-height: 41px;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: -50px;
+            transition: .3s;
+        }
+        .btn:hover:before{
+            content: '\f061';
+            width: 42px;
+            font-size: 24px;
+            font-family: FontAwesome;
+            line-height: 41px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.3s;
+        }
+        .service-box.color-2.extra-btn .btn:hover:before {
+            color: #f86924;
+        }
+        .service-box.color-1.extra-btn .btn:hover:before {
+            color: #35bc7a;
+        }
+        .service-box.color-3.extra-btn .btn:hover:before {
+            color: #ff9f00;
+        }
+        .btn:hover:after{
+            left: 50px;
+        }
+        /* start static card */
     </style>
 </head>
 <body>
@@ -54,8 +295,168 @@
         <main>Main content
             <div class="container main-container">Inside Container
                 <div class="row">Row 1</div>
-                <div class="row">Row 2</div>
-                <div class="row">Row 3</div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- start service box -->
+                        <div class="service-box color-1 extra-btn">
+                            <figure class="icon">
+                                <i class="icon-leaf"></i>
+                            </figure>
+                            <div class="service-box_body">
+                                <h2 class="title">Creative Solutions</h2>
+                                <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
+                                <div class="btn-align">
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end service box -->
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="service-box color-2 extra-btn">
+                            <figure class="icon">
+                                <i class="icon-cogs"></i>
+                            </figure>
+                            <div class="service-box_body">
+                                <h2 class="title">Featured Service</h2>
+                                <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
+                                <div class="btn-align">
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="service-box color-3 extra-btn">
+                            <figure class="icon">
+                                <i class="icon-comments-alt"></i>
+                            </figure>
+                            <div class="service-box_body">
+                                <h2 class="title">Technical Support</h2>
+                                <div class="service-box_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint aperiam laborum cum consequatur quod dicta mollitia alias voluptatum at ullam? Ipsa cum fuga sapiente repudiandae et? In, laboriosam libero.</div>
+                                <div class="btn-align">
+                                    <a href="#" title="Read More" class="btn btn-inverse btn-normal btn-primary" target="_self">"Read More"</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+                <h3>Lates Projects</h3>
+                <div class="row">   
+                    <div class="col-sm-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- start front card -->
+                                <div class="flip-card-front"> 
+                                    <img src="./img-card/project-1-264x248.jpg" alt="img" class="img-card">
+                                    <div class="content">
+                                        <h5>Image Format</h5>
+                                    </div>
+                                </div>
+                                <!-- end front card -->
+                                <!-- start back card -->
+                                <div class="flip-card-back">
+                                    <div class="inner">     
+                                        <h5>Image Format</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit,
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                        </p>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Image Format"> Read More</a>
+                                    </div>       
+                                </div>
+                                <!-- end back card -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- start front card -->
+                                <div class="flip-card-front"> 
+                                    <img src="./img-card/project-2-264x248.jpg" alt="img" class="img-card">
+                                    <div class="content">
+                                        <h5>Slideshow Format</h5>
+                                    </div>
+                                </div>
+                                <!-- end front card -->
+                                <!-- start back card -->
+                                <div class="flip-card-back">
+                                    <div class="inner">     
+                                        <h5>Slideshow Format</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit,
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                        </p>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Slideshow Format"> Read More</a>
+                                    </div>       
+                                </div>
+                                <!-- end back card -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- start front card -->
+                                <div class="flip-card-front"> 
+                                    <img src="./img-card/project-3-264x248.jpg" alt="img" class="img-card">
+                                    <div class="content">
+                                        <h5>Gallery Format</h5>
+                                    </div>
+                                </div>
+                                <!-- end front card -->
+                                <!-- start back card -->
+                                <div class="flip-card-back">
+                                    <div class="inner">     
+                                        <h5>Gallery Format</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit,
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                        </p>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Gallery Format"> Read More</a>
+                                    </div>       
+                                </div>
+                                <!-- end back card -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- start front card -->
+                                <div class="flip-card-front"> 
+                                    <img src="./img-card/project-4-264x248.jpg" alt="img" class="img-card">
+                                    <div class="content">
+                                        <h5>Video Format</h5>
+                                    </div>
+                                </div>
+                                <!-- end front card -->
+                                <!-- start back card -->
+                                <div class="flip-card-back">
+                                    <div class="inner">     
+                                        <h5>Video Format</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit,
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                            amet consectetur adipisicing elit. 
+                                            Expedita non dolorum aspernatur voluptas aliquam. 
+                                        </p>
+                                        <a href="https://livedemo00.template-help.com/wordpress_44910/portfolio-view/image-format/" class="btn-primary" title="Video Format"> Read More</a>
+                                    </div>       
+                                </div>
+                                <!-- end back card -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">Row 4</div>
                 <div class="row">Row 5</div>
             </div>
